@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Manager App</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+
+<!-- Signup/Login/Update Auth Section -->
+<div id="authSection" class="auth-section">
+  <h2 id="authTitle">📝 Create Your Master Account</h2>
+  <form id="authForm">
+    <label>Your Name:</label>
+    <input type="text" id="authName" required>
+    <label>Password:</label>
+    <input type="password" id="authPassword" required>
+    <button type="submit" id="authBtn">Sign Up</button>
+  </form>
+  <button onclick="toggleAuthMode()" style="background:#3498db;">Switch to Login</button>
+  <button onclick="toggleUpdateForm()" style="background:#8e44ad;">Update Name / Password</button>
+
+  <div id="updateUserForm" class="hidden">
+    <label>New Name:</label>
+    <input type="text" id="updateName">
+    <label>New Password:</label>
+    <input type="password" id="updatePassword">
+    <button onclick="updateUser()" style="background:#2ecc71;">Update Info</button>
+  </div>
+</div>
+
+<!-- Main App Section -->
+<div id="appSection" class="hidden">
+  <h2>🔐 Password Manager <button class="logoutBtn" onclick="logout()">Logout</button></h2>
+
+  <div class="search-box">
+    <label>🔍 Search App:</label>
+    <input type="text" id="searchInput" placeholder="Type app name...">
+  </div>
+
+  <form id="passwordForm">
+    <label>App Name:</label>
+    <input type="text" id="appName" required>
+    <label>Username:</label>
+    <input type="text" id="username" required>
+    <label>Password:</label>
+    <input type="text" id="password" required>
+    <button id="saveBtn" type="submit">💾 Save Password</button>
+  </form>
+
+  <table id="passwordTable">
+    <thead>
+      <tr>
+        <th>App Name</th>
+        <th>Username</th>
+        <th>Password + Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script src="script/script.js"></script>
+
+</body>
+</html>

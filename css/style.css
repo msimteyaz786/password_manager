@@ -1,0 +1,93 @@
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 20px;
+    }
+    h2, h3 { text-align: center; }
+    .hidden { display: none; }
+    form, .search-box, .update-box, .auth-section {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 15px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .logoutBtn {
+      background-color: #e74c3c;
+      width: auto;
+      float: right;
+    }
+    .actions {
+      margin-top: 8px;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .update, .delete, .toggle {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .update { background: #2980b9; color: #fff; }
+    .delete { background: #e74c3c; color: #fff; }
+    .toggle { background: #f39c12; color: #fff; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    th { background-color: rgba(0, 0, 0, 0.3); }
+    @media screen and (max-width: 768px) {
+      table, thead, tbody, th, td, tr { display: block; }
+      th { display: none; }
+      td {
+        position: relative;
+        padding-left: 50%;
+      }
+      td::before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-weight: bold;
+      }
+      td:nth-child(1)::before { content: "App Name"; }
+      td:nth-child(2)::before { content: "Username"; }
+      td:nth-child(3)::before { content: "Password + Actions"; }
+    }
